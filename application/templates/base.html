@@ -18,21 +18,32 @@
 
                 <div id="navbarMenuHeroA" class="navbar-menu">
                     <div class="navbar-end">
+
                         <a href="{{ url_for('main.index') }}" class="navbar-item">
                             ホーム
                         </a>
+
+                        {% if current_user.is_authenticated %}
                         <a href="{{ url_for('main.profile') }}" class="navbar-item">
                             プロフィール
                         </a>
+                        {% endif %}
+
+                        {% if not current_user.is_authenticated %}
                         <a href="{{ url_for('auth.login') }}" class="navbar-item">
                             ログイン
                         </a>
                         <a href="{{ url_for('auth.signup') }}" class="navbar-item">
                             アカウント作成
                         </a>
+                        {% endif %}
+
+                        {% if current_user.is_authenticated %}
                         <a href="{{ url_for('auth.logout') }}" class="navbar-item">
                             ログアウト
                         </a>
+                        {% endif %}
+
                     </div>
                 </div>
             </div>
