@@ -1,0 +1,5 @@
+application/__pycache__
+docker/
+migrations/
+
+.idea/
