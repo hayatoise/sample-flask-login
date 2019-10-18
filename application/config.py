@@ -4,6 +4,7 @@ import os
 class DevelopmentConfig:
     # Flask
     DEBUG = True
+    SECRET_KEY = os.urandom(24)
 
     # SQLAlchemy
     SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://{user}:{password}@{host}:{port}/database?charset=utf8mb4'.format(**{
