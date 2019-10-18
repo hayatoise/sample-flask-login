@@ -11,6 +11,8 @@ flask-sqlalchemy = "*"
 sqlalchemy = "*"
 pymysql = "*"
 flask-migrate = "*"
+flask-login = "*"
+werkzeug = "*"
 
 [requires]
 python_version = "3.7"
