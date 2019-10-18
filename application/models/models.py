@@ -1,9 +1,11 @@
 from datetime import datetime
 
+from flask_login import UserMixin
+
 from application.database import db
 
 
-class User(db.Model):
+class User(db.Model, UserMixin):
     __tablename__ = 'users'
 
     __table_args__ = (
